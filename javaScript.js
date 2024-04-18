@@ -48,3 +48,40 @@ for (let [key, value] of Object.entries(userDetails)) {
   
   ${value}`);
 }
+
+// functions
+
+const trainsArrivalTimings = {
+  train_1: "11",
+  train_2: "12",
+  train_3: "13",
+};
+
+function markTrainAttendece() {
+  // attedence marked
+}
+
+function isTrainArrivedOnTime(trainName, arrivalTime) {
+  // for (let i in trainsArrivalTimings) {
+  //   if (trainName === i) {
+  //     markTrainAttendece();
+  //     if (arrivalTime <= trainsArrivalTimings[i]) {
+  //       return true;
+  //     }
+  //   }
+  // }
+
+  // return false;
+
+  const trainActualArriveTime = trainsArrivalTimings[trainName];
+  if (trainActualArriveTime) {
+    markTrainAttendece();
+    return arrivalTime <= trainActualArriveTime;
+  }
+  return false;
+}
+
+const isTrain1ArrivedOnTime = isTrainArrivedOnTime("train_2", "14");
+
+console.log(isTrain1ArrivedOnTime);
+
