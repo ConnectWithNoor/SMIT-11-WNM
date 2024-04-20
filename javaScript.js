@@ -85,3 +85,58 @@ const isTrain1ArrivedOnTime = isTrainArrivedOnTime("train_2", "14");
 
 console.log(isTrain1ArrivedOnTime);
 
+
+const trainsArrivalTimings = {
+  train_1: "11",
+  train_2: "12",
+  train_3: "13",
+};
+
+// const isTrainArrivedOnTimeAnon = (trainName, arrivalTime) => {
+//   const trainActualArriveTime = trainsArrivalTimings[trainName];
+//   if (trainActualArriveTime) {
+//     return arrivalTime <= trainActualArriveTime;
+//   }
+//   return false;
+// };
+
+// console.log(isTrainArrivedOnTimeAnon("train_2", "11"));
+
+// spread operator
+
+const classA = ["A", "B", "S", "R"];
+const classB = ["S", "R", "W", "M"];
+
+function calculateAllStudents(...rest) {
+  const r = rest[5];
+  const m = rest[rest.length - 1];
+  return [r, m];
+
+  // return [rest[5], rest[rest.length - 1]];
+}
+
+// const calculateAllStudents = (...rest) => [rest[5], rest[rest.length - 1]];
+
+// const result = calculateAllStudents(...classA, ...classB);
+// console.log(result);
+
+// let vs var scope
+
+// function doingStuff() {
+//   if (true) {
+//     let x = "local";
+//   }
+//   console.log(x);
+// }
+// doingStuff();
+
+function doingStuff() {
+  // var x;
+
+  if (true) {
+    var x = "local";
+    console.log(x);
+  }
+}
+
+// doingStuff();
