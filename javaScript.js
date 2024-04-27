@@ -140,3 +140,96 @@ function doingStuff() {
 }
 
 // doingStuff();
+
+
+
+// function addSum(num1, num2) {
+//   const total = num1 + num2;
+//   return total;
+// }
+
+// const result = addSum(1, 2);
+
+// (() => {
+//   const total = 2 + 3;
+//   console.log("run");
+//   return total;
+// })();
+
+// function printNumberInDecrement(num) {
+//   console.log(num);
+//   if (num < 1) {
+//     return;
+//   }
+
+//   printNumberInDecrement(num--);
+// }
+
+// function factorialRecursive(num) {
+//   if (num <= 0) {
+//     return 1;
+//   }
+
+//   const result = num * factorialRecursive(--num);
+//   return result;
+// }
+
+// console.log(factorialRecursive(6));
+
+// Nested functions // closure
+
+// function headoffice(officeName, officeLocation) {
+//   // console.log("headoffice called", officeName, officeLocation);
+//   return function (branchName, branchLocation) {
+//     // console.log(`headoffice name: ${officeName}`);
+//     // console.log(`headoffice location: ${officeLocation}`);
+//     // console.log(`branch name: ${branchName}`);
+//     // console.log(`branch location: ${branchLocation}`);
+
+//     return function (roomNum) {
+//       console.log(`headoffice name: ${officeName}`);
+//       console.log(`headoffice location: ${officeLocation}`);
+//       console.log(`branch name: ${branchName}`);
+//       console.log(`branch location: ${branchLocation}`);
+//       console.log(`Room#: ${roomNum}`);
+//     };
+//   };
+// }
+
+// const branchFunc = headoffice("saylani", "bahadurabad");
+// const MaJinnahRooms = branchFunc("branch 1", "MA Jinnah");
+// const GulshanRooms = branchFunc("branch 2", "Gulshan");
+
+// MaJinnahRooms(3);
+// GulshanRooms(5);
+
+// function global(name) {
+//   return function country(countryName) {
+//     return function city(cityName) {
+//       return function branch(branchName) {
+//         console.log(
+//           `global ${name}, country ${countryName}, city: ${cityName}, branch ${branchName}`
+//         );
+//       };
+//     };
+//   };
+// }
+
+// const globalRef = global("global");
+
+// const UKRef = globalRef("UK");
+// const PakistanRef = globalRef("Pakistan");
+
+// const UKCityRef = UKRef("London");
+// const PakCityRef = PakistanRef("Karachi");
+
+// if(UKCityRef){ // UKCityNeedsHelp
+//   PakCityRef.call()
+// }
+
+// UKCityRef.CallOtherCity(PakCityRef)
+
+// PassByValue & PassByReference
+
+const name = "Noor"; //[123];
+const names = ["A", "V", "C"]; // [111, 112, 113]
