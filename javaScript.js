@@ -304,3 +304,29 @@ class Honda extends Car {
 
 const City = new Honda("H1.2s", 4, 5, "Black", "2024", "XLI");
 
+
+// const outputEle = document.getElementsByClassName("output");
+
+// for (let ele of outputEle) {
+//   if (ele.localName === "div") continue;
+//   ele.innerHTML = "Noor Muhammad";
+// }
+
+// const divOutput = document.getElementById("div_output");
+
+// console.log(divOutput);
+
+// document.getElementsByName('h1')
+
+// const outputEle = document.querySelectorAll('div')
+// const outputEle = document.querySelector('div')
+
+const outputEl = document.querySelector(".output");
+const mainList = outputEl.querySelector("ul");
+const divList = outputEl.querySelectorAll("div");
+
+[...outputEl.children].forEach((ele, idx) => {
+  const id = idx + 1;
+  ele.setAttribute("id", id);
+  ele.style.color = id % 2 === 0 ? "blue" : "red";
+});
