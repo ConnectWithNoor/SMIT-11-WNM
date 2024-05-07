@@ -330,3 +330,55 @@ const divList = outputEl.querySelectorAll("div");
   ele.setAttribute("id", id);
   ele.style.color = id % 2 === 0 ? "blue" : "red";
 });
+
+
+// DOM
+
+// console.log(
+//   document.body.children.forest.children.tree2.children.shrubbery.children
+//     .treasure
+// );
+
+// const treasureEle =
+//   document.body.childNodes[3].childNodes[3].childNodes[1].childNodes[1];
+
+// treasureEle.innerHTML = "<h1>Noor</h1>";
+
+const treasureEle = document.getElementsByTagName("div");
+const jsBtn = document.querySelector("#js-btn");
+const forestEle = document.querySelector("#forest");
+
+// jsBtn.addEventListener("click", function reveal(el) {
+//   console.log(this.parentElement);
+//   //   console.log(el.parentElement);
+// });
+
+// jsBtn.style.backgroundColor = "#cccc";
+// jsBtn.style.outline = "none";
+// jsBtn.style.border = "none";
+// jsBtn.style.borderRadius = "5px";
+// jsBtn.style.padding = "5px";
+// jsBtn.style.cursor = "pointer";
+
+// function toggleBackground() {
+//   if (jsBtn.style.visibility === "hidden") {
+//     // jsBtn.style.backgroundColor = "blue";
+//     jsBtn.style.visibility = "visible";
+//     return;
+//   }
+
+//   //   jsBtn.style.backgroundColor = "red";
+//   jsBtn.style.visibility = "hidden";
+// }
+
+// jsBtn.addEventListener("click", toggleBackground);
+
+jsBtn.addEventListener("click", () => jsBtn.classList.toggle("bgRed"));
+
+// jsBtn.setAttribute("type", "submit");
+
+const submitBtn = document.createElement("button");
+submitBtn.setAttribute("id", "submit-btn");
+submitBtn.innerHTML = "Submit Form";
+submitBtn.addEventListener("click", () => console.log("form submitted"));
+forestEle.appendChild(submitBtn);
