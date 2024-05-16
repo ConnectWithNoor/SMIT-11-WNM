@@ -382,3 +382,91 @@ submitBtn.setAttribute("id", "submit-btn");
 submitBtn.innerHTML = "Submit Form";
 submitBtn.addEventListener("click", () => console.log("form submitted"));
 forestEle.appendChild(submitBtn);
+
+// // drag & drop
+
+// const boxesEle = document.getElementsByClassName("box");
+// const dragabbleEle = document.getElementById("dragme");
+
+// for (let box of boxesEle) {
+//   box.addEventListener("drop", () => dDrop());
+//   box.addEventListener("dragover", () => nDrop());
+// }
+
+// dragabbleEle.addEventListener("dragstart", dStart);
+
+// let holderItem;
+// function dStart() {
+//   holderItem = event.target;
+// }
+// function nDrop() {
+//   event.preventDefault();
+// }
+// function dDrop() {
+//   console.log(123);
+//   event.preventDefault();
+//   if (event.target.className == "box") {
+//     event.target.appendChild(holderItem);
+//   }
+// }
+
+// // form submit
+
+// let q = window.location.search;
+// let params = new URLSearchParams(q);
+// let name = params.get("name");
+// console.log(name);
+
+// const titleEle = document.getElementById("title");
+
+// const intervalID = setInterval(() => {
+//   titleEle.innerText = `${titleEle.innerText} New Title`;
+// }, 2000);
+
+// const timeoutId = setTimeout(() => {
+//   clearInterval(intervalID);
+// }, 10000);
+
+// clearTimeout(timeoutId);
+
+// for (let i = 0; i < 10; i++) {
+//   console.log(i);
+// }
+
+// Error handling
+
+// function dangerousFunction() {
+//   throw new Error("Resource not found");
+// }
+
+// try {
+//   dangerousFunction();
+//   // in case of successful execution
+// } catch (error) {
+//   Error;
+//   console.log(error.message);
+//   document.querySelector("#error").innerHTML = error.message;
+//   // window.location.href = "/not-found.html";
+// }
+
+// Cookies
+// let cookieObj = {};
+
+// const cookie = `name=Maaike;color=red;roll#=41`;
+
+// const cookie1 = cookie.split(";");
+// cookie1.forEach((c) => {
+//   const [key, value] = c.split("="); // result = [key, value]
+//   cookieObj[key] = value;
+// });
+
+// console.log(cookieObj);
+
+// fetch(
+//   "https://api.openweathermap.org/data/2.5/weather?q=karachi&appid=6104d8610d23fefc227bcc247ed74c73&units=imperial",
+//   {
+//     method: "GET",
+//   }
+// )
+//   .then((res) => res.json())
+//   .then((resp) => console.log(resp));
