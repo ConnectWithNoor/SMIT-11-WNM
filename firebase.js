@@ -4,11 +4,14 @@ import {
   getFirestore,
   collection,
   doc,
+  setDoc,
+  getDoc,
 } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
 import {
   getAuth,
   createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
 } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 
 import { getStorage } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-storage.js";
@@ -28,4 +31,14 @@ const auth = getAuth(app);
 const storage = getStorage(app);
 
 export default app;
-export { db, collection, doc, auth, storage, createUserWithEmailAndPassword };
+export {
+  db,
+  collection,
+  doc,
+  auth,
+  storage,
+  setDoc,
+  getDoc,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+};
